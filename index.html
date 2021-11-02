@@ -16,7 +16,7 @@
         v-bind:alt="title"
       />
       <h1 v-bind:class="changePercent > 0 ? 'green' : 'red'">
-        {{ name }}
+        {{ title }}
         <span v-if="changePercent > 0">👍</span>
         <span v-else-if="changePercent < 0">👎</span>
         <span v-else>🤞</span>
@@ -24,6 +24,8 @@
           {{ showPrices ? '🙈' : '🐵' }}
         </span>
       </h1>
+      <input type="number" v-model="value" />
+      <span>{{ convertedValue }}</span>
       <ul v-show="showPrices">
         <li
           class="uppercase"
