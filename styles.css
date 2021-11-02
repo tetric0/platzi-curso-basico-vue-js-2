@@ -1,3 +1,24 @@
+html {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0px;
+  flex: 1;
+  display: flex;
+}
+
+#app {
+  flex: 1;
+  margin: 0;
+  padding: 10px;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
