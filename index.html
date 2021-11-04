@@ -9,10 +9,19 @@
   </head>
   <body>
     <div id="app" v-bind:style="{ background: '#' + color }">
-      <coin-detail
-        v-on:change-color="updateColor"
-        v-bind:coin="btc"
-      ></coin-detail>
+      <coin-detail v-on:change-color="updateColor" v-bind:coin="btc">
+        <template v-slot:text>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            inventore corrupti repellat similique ipsam voluptatum officia est
+            doloribus, culpa nemo excepturi eaque. Praesentium vero aliquam,
+            voluptatem architecto modi soluta magnam!
+          </p>
+        </template>
+        <template v-slot:link>
+          <a href="#">Link!</a>
+        </template>
+      </coin-detail>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./app.js"></script>
