@@ -1,14 +1,14 @@
 // Fork del proyecto en CodePen: https://codepen.io/ianaya89/pen/LYYJzor
 Vue.component('modal', {
-    props: [
-        'titulo',
-    ],
+  props: [
+    'title',
+  ],
 
-    template: `
+  template: `
       <div class="modal-mask">
         <div class="modal-wrapper">
           <div class="modal-container">
-            <h3>{{ titulo }}</h3>
+            <h3>{{ title }}</h3>
             <div>
               <slot name="body"></slot>
             </div>
@@ -19,26 +19,26 @@ Vue.component('modal', {
         </div>
       </div>`,
 
-    methods: {
-        close() {
-            this.$emit('close')
-        }
+  methods: {
+    close() {
+      this.$emit('close')
     }
+  }
 })
 
 new Vue({
-    el: '#app',
+  el: '#app',
 
-    data() {
-        return {
-            showModal: false,
-            title: 'Atención',
-        }
-    },
-
-    methods: {
-        toggleModal() {
-            this.showModal = !this.showModal
-        }
+  data() {
+    return {
+      showModal: false,
+      title: 'Atención',
     }
+  },
+
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal
+    }
+  }
 })
