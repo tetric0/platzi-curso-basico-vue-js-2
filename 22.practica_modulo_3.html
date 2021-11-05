@@ -1,0 +1,29 @@
+<!-- Fork del proyecto en CodePen: https://codepen.io/ianaya89/pen/LYYJzor -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./22.practica_modulo_3.css" />
+  </head>
+  <body>
+    <div id="app">
+      <button v-on:click="toggleModal">Show Modal</button>
+
+      <modal v-show="showModal" v-bind:titulo="title" v-on:close="toggleModal">
+        <template v-slot:body>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            inventore corrupti repellat similique ipsam voluptatum officia est
+            doloribus, culpa nemo excepturi eaque. Praesentium vero aliquam,
+            voluptatem architecto modi soluta magnam!
+          </p>
+        </template>
+      </modal>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./22.practica_modulo_3.js"></script>
+  </body>
+</html>
