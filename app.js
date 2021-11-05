@@ -31,6 +31,22 @@ Vue.component('CoinDetail', {
         }
     },
 
+    // Lifecycle Hook
+    // @source https://vuejs.org/v2/guide/instance.html#Instance-Lifecycle-Hooks
+    // Es uno de los primeros eventos que ocurren dentro del ciclo de vida de un componente.
+    // Bueno para obtener información de una API Rest.
+    created() {
+        console.log('Created CoinDetail...');
+    },
+
+    // LifeCycle Hook
+    // @source https://vuejs.org/v2/guide/instance.html#Instance-Lifecycle-Hooks
+    // En este evento ya tenemos disponible el DOM y se puede acceder a su información
+    // (básicamente elementos del HTML que no están disponibles en el evento 'Created')
+    mounted() {
+        console.log('Mounted CoinDetail...');
+    },
+
     template: `
       <div>
         <img
@@ -94,6 +110,22 @@ new Vue({
 
             color: 'f4f4f4',
         }
+    },
+
+    // Lifecycle Hook
+    // @source https://vuejs.org/v2/guide/instance.html#Instance-Lifecycle-Hooks
+    // Es uno de los primeros eventos que ocurren dentro del ciclo de vida de un componente.
+    // Bueno para obtener información de una API Rest.
+    created() {
+        console.log('Created...');
+    },
+
+    // LifeCycle Hook
+    // @source https://vuejs.org/v2/guide/instance.html#Instance-Lifecycle-Hooks
+    // En este evento ya tenemos disponible el DOM y se puede acceder a su información
+    // (básicamente elementos del HTML que no están disponibles en el evento 'Created')
+    mounted() {
+        console.log('Mounted...');
     },
 
     methods: {
